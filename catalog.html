@@ -7,11 +7,11 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header main-header-catalog">
-      <div class="container clearfix"> <!-- класс-центровщик здесь и далее -->
+    <div class="container clearfix">
+      <header class="main-header main-header-catalog">
         <div class="logo">
           <a href="index.html" title="Gllacy Shop">
-            <img src="img/logo.png" width="154" height="64" alt="Gllacy Shop">
+            <img src="img/logo.svg" width="154" height="64" alt="Gllacy Shop">
           </a>
         </div>
         <nav class="main-navigation">
@@ -76,35 +76,35 @@
                 </form>
               </div>
           </div>
-          <div class="cart-block">
-            <a href="#" class="cart-items" title="Корзина">2 товара</a>
+          <div class="cart-block cart-not-empty">
+            <a href="#" title="Корзина">2 товара</a>
             <div class="cart-full">
               <table class="cart-content">
                 <tr>
-                  <td><button type="button">Удалить</button></td>
-                  <td>
+                  <td class="cell-first"><button type="button">Удалить</button></td>
+                  <td class="cell-second">
                     <a href="#" title="Пломбир с апельсиновым джемом">
                       <img src="img/ice-cream-cart1.jpg" width="33" height="33" alt="">
                     </a>
                   </td>
-                  <td>
+                  <td class="cell-third">
                     <a href="#" title="Пломбир с апельсиновым джемом">Пломбир с апельсиновым джемом</a>
                   </td>
-                  <td><span>1,5 кг &#215;</span><span class="item-price">200 руб.</span></td>
-                  <td><span>300 руб.</span></td>
+                  <td class="cell-forth"><span>1,5 кг &#215;</span><span class="item-price">200 руб.</span></td>
+                  <td class="cell-fifth"><span>300 руб.</span></td>
                 </tr>
                 <tr>
-                  <td><button type="button">Удалить</button></td>
-                  <td>
+                  <td class="cell-first"><button type="button">Удалить</button></td>
+                  <td class="cell-second">
                     <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">
                       <img src="img/ice-cream-cart2.jpg" width="33" height="33" alt="">
                     </a>
                   </td>
-                  <td>
+                  <td class="cell-third">
                     <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">Клубничный пломбир с присыпкой из белого шоколада</a>
                   </td>
-                  <td><span>1,5 кг &#215;</span><span class="item-price">300 руб.</span></td>
-                  <td><span>450 руб.</span></td>
+                  <td class="cell-forth"><span>1,5 кг &#215;</span><span class="item-price">300 руб.</span></td>
+                  <td class="cell-fifth"><span>450 руб.</span></td>
                 </tr>
               </table>
               <div class="cart-sum">
@@ -118,8 +118,8 @@
           <span>С 10 до 20 ежедневно</span><br>
           <a href="tel:+78124502525" title="+7 (812) 450-25-25">8 812 450-25-25</a>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
     <main class="container clearfix">
       <div class="main-menu-header">
         <ul class="main-breadcrumbs">
@@ -130,13 +130,13 @@
             <a href="#" title="Каталог">Каталог</a>
           </li>
           <li>
-            <a title="Сливочное" class="main-breadcrumbs-item">Сливочное</a>
+            <a title="Сливочное" class="main-breadcrumbs-active-item">Сливочное</a>
           </li>
         </ul>
         <h1 class="main-heading">Сливочное мороженое</h1>
       </div>
-      <div class="forms-block">
-        <form name="preferences-form" action="https://echo.htmlacademy.ru/" method="get">
+      <form name="preferences-form" action="https://echo.htmlacademy.ru/" method="get">
+        <div class="forms-block">
           <fieldset class="pref-block preferences">
             <legend>Сортировка:</legend>
               <div class="select-wrapper">
@@ -149,7 +149,7 @@
               </div>
           </fieldset>
           <fieldset class="pref-block range-manage">
-            <legend>Цена: 100 <span class="currency">руб.</span> &mdash; 500 <span class="currency">руб.</span></legend>
+            <legend>Цена: 100 <span class="currency">руб.</span> &ndash; 500 <span class="currency">руб.</span></legend>
               <div class="scale">
                 <div class="scale-bar">
                   <div class="scale-bar-over"></div>
@@ -205,8 +205,8 @@
               </ul>
           </fieldset>
           <button class="pref-block btn-catalog-apply" type="submit">Применить</button>
-        </form>
-      </div>
+        </div>
+      </form>
       <section class="catalog-items-block catalog-items-block-catalog">
         <article class="catalog-item">
           <div>
@@ -392,7 +392,7 @@
       <div class="page-numbers clearfix">
         <ul>
           <li>
-            <a href="#" class="prev" title="Предыдущая страница">&lt;</a>
+            <a href="#" class="prev no-pages" title="Предыдущая страница">&lt;</a>
           </li>
           <li>
             <a class="current-page-number" title="Страница 1">1</a>
@@ -450,14 +450,16 @@
             </ul>
         </section>
         <section class="footer-copyright">
-          <a href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy">
-            <img src="img/academy-logo.png" width="108" height="38" alt="HTML Academy">
-          </a>
-          <p>
-            Сделано в
-            <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy">HTML Academy</a>
-            &#169; 2017
-          </p>
+          <div>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy">
+              <img src="img/logo-htmlacademy.svg" width="108" height="38" alt="HTML Academy">
+            </a>
+            <p>
+              Сделано в
+              <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy">HTML Academy</a>
+              &#169; 2017
+            </p>
+        </div>
         </section>
       </footer>
     </div>
