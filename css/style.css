@@ -55,12 +55,6 @@ body {
   margin: 0 auto;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 a {
   color: #ffffff;
   text-align: center;
